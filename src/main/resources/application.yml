@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: cotizador
+
+  # 🔒 Evitamos que intente conectar a una DB R2DBC
+  r2dbc:
+    url: ''
+    username: ''
+    password: ''
+
+spring.main:
+  web-application-type: reactive
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
