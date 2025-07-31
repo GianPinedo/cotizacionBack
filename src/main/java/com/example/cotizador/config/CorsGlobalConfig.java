@@ -7,6 +7,7 @@ import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 @Configuration
 public class CorsGlobalConfig {
@@ -15,11 +16,7 @@ public class CorsGlobalConfig {
     public CorsWebFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         
-        config.setAllowedOrigins(Arrays.asList(
-            "http://localhost:4200",
-            "https://5354fa7cd396.ngrok-free.app" 
-        ));
-
+        config.setAllowedOriginPatterns(Collections.singletonList("*"));
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
         config.setAllowCredentials(true);
