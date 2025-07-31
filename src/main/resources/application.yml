@@ -5,11 +5,17 @@ spring:
   application:
     name: cotizador
 
-  # 🔒 Evitamos que intente conectar a una DB R2DBC
+ 
   r2dbc:
     url: ''
     username: ''
     password: ''
+    
+  
+  data:
+    redis:
+      host: localhost
+      port: 6379
 
 spring.main:
   web-application-type: reactive
