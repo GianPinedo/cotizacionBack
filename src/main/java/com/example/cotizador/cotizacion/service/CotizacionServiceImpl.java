@@ -29,7 +29,7 @@ public class CotizacionServiceImpl implements CotizacionService {
                 double ajusteMarca = calcularAjusteMarca(request.getMarca());
 
                 double primaTotal = Constants.PRECIO_BASE + ajusteAnio + ajusteUso + ajusteEdad + ajusteMarca;
-                // Construir la respuesta
+                System.out.println("Recalculando cotización para: " + request);
                 CotizacionResponse response = CotizacionResponse.builder()
                         .precioBase(Constants.PRECIO_BASE)
                         .ajusteAnio(ajusteAnio)
